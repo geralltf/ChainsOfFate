@@ -1,0 +1,30 @@
+﻿title: OldManExterior
+tags:
+---
+OM: “Just in Time! The metal is at its optimal heat, please take a seat, otherwise ill have to keep hammering this until you are.”
+OM: “And I can keep this up for days!”
+===
+title: ArmAttach
+---
+OM: “Right, hope you drank that medicine I gave you, cause this may hurt a lot otherwise!”
+-> Player: am I going to Regret this?
+    OM: "I really doubt it, I am a firm believer that two arms are better than one!"
+    <<jump ArmContinue>>
+-> Player: What are you going to do?
+    OM: "I have been reserching a rare metal that reacts to the will of whomever holds it""
+    OM: "But this will be the first time its been used this way and I am keen to see what happens!""
+    <<jump ArmContinue>>
+===
+title: ArmContinue
+---
+OM: “And it is one of my greatest works! And I think it will serve you quite well indeed!"
+OM: "Ill admit, its more of an experiment than anything, so promise you come back and let me know how its going”
+OM: “Perhaps we could look into some modifications...”
+Player: “What.. What is this? I can feel it as if it was my own arm, but … heavier…”
+OM: “This is Klearite - A rather interesting substance - its will is that of the person that holds it!”
+OM: “At least… that’s what those fancy people in the capital say, I am sure they can tell you more..”
+OM: “I am just someone who is still working out how to shape it for various needs!”
+Player: “So you.. Made an artificial arm for me?”
+OM: “Well it just seemed like the chance for an appropriate test! No one has had this much Klearite infused to them before! But you survived this far, I am sure you’ll come back and tell me about your adventures”
+OM: “Surely you will remember the one person who saved your life? Excellent! Now, to help you get acquainted, I have asked a friend of mine to assist you”
+===

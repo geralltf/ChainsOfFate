@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 596a459de2370164c808b589e248bbc5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+
+
+combat scene
+	roaming enemies, patrol a path
+	chase on sight
+	collider
+
+need a list of what animation states, so that I can create conditions to check for
+
