@@ -105,12 +105,12 @@ namespace ChainsOfFate.Gerallt
 
         public string ID => id;
         
-        public int MaxHealth => healthStat.maxValue;
-        public int MaxArcana => arcanaStat.maxValue;
-        public int MaxResolve => resolveStat.maxValue;
-        public int MaxWisdom => wisdomStat.maxValue;
-        public int MaxDefense => defenseStat.maxValue;
-        public int MaxStrength => strengthStat.maxValue;
+        public int MaxHealth => healthStat.MaxValue;
+        public int MaxArcana => arcanaStat.MaxValue;
+        public int MaxResolve => resolveStat.MaxValue;
+        public int MaxWisdom => wisdomStat.MaxValue;
+        public int MaxDefense => defenseStat.MaxValue;
+        public int MaxStrength => strengthStat.MaxValue;
         
         public string CharacterName
         {
@@ -122,7 +122,7 @@ namespace ChainsOfFate.Gerallt
             }
         }
         
-        public int HP
+        public float HP
         {
             get => healthStat.Value;
             set
@@ -132,7 +132,7 @@ namespace ChainsOfFate.Gerallt
             }
         }
 
-        public int Arcana
+        public float Arcana
         {
             get => arcanaStat.Value;
             set
@@ -142,7 +142,7 @@ namespace ChainsOfFate.Gerallt
             }
         }
 
-        public int Resolve
+        public float Resolve
         {
             get => resolveStat.Value;
             set
@@ -152,7 +152,7 @@ namespace ChainsOfFate.Gerallt
             }
         }
 
-        public int Defense
+        public float Defense
         {
             get => defenseStat.Value;
             set
@@ -162,7 +162,7 @@ namespace ChainsOfFate.Gerallt
             }
         }
 
-        public int Wisdom
+        public float Wisdom
         {
             get => wisdomStat.Value;
             set
@@ -182,7 +182,7 @@ namespace ChainsOfFate.Gerallt
             }
         }
 
-        public int Strength
+        public float Strength
         {
             get => strengthStat.Value;
             set
@@ -295,7 +295,7 @@ namespace ChainsOfFate.Gerallt
         /// </summary>
         public virtual void ApplyDamage(int damage)
         {
-            int hitPoints = HP;
+            float hitPoints = HP;
             
             hitPoints -= damage;
             
@@ -317,7 +317,7 @@ namespace ChainsOfFate.Gerallt
         /// </summary>
         public virtual void ApplyHealth(int healthChange)
         {
-            int hitPoints = HP;
+            float hitPoints = HP;
             
             hitPoints += healthChange;
             
@@ -339,7 +339,7 @@ namespace ChainsOfFate.Gerallt
         /// </summary>
         public virtual void ReduceArcana(int spellCost)
         {
-            int arc = Arcana;
+            float arc = Arcana;
             
             arc -= spellCost;
             
@@ -361,7 +361,7 @@ namespace ChainsOfFate.Gerallt
         /// </summary>
         public virtual void ApplyArcana(int arcanaChange)
         {
-            int arc = Arcana;
+            float arc = Arcana;
             
             arc += arcanaChange;
             
@@ -383,7 +383,7 @@ namespace ChainsOfFate.Gerallt
         /// </summary>
         public virtual void ApplyResolve(int resolveChange)
         {
-            int res = Resolve;
+            float res = Resolve;
             
             res += resolveChange;
             
@@ -405,7 +405,7 @@ namespace ChainsOfFate.Gerallt
         /// </summary>
         public virtual void ApplyWisdom(int wisdomChange)
         {
-            int wis = Wisdom;
+            float wis = Wisdom;
             
             wis += wisdomChange;
             
@@ -427,7 +427,7 @@ namespace ChainsOfFate.Gerallt
         /// </summary>
         public virtual void ApplyStrength(int strengthChange)
         {
-            int strength = Strength;
+            float strength = Strength;
             
             strength += strengthChange;
             
@@ -449,7 +449,7 @@ namespace ChainsOfFate.Gerallt
         /// </summary>
         public virtual void ApplyDefense(int defenseChange)
         {
-            int defense = Defense;
+            float defense = Defense;
             
             defense += defenseChange;
             

@@ -2,13 +2,11 @@ using UnityEngine;
 
 namespace ChainsOfFate.Gerallt
 {
-    public class SingletonBase<T> : MonoBehaviour where T : SingletonBase<T>
-    {
-        public static T Instance;
-        
+    public class ManagerBase<T> : MonoBehaviour where T : ManagerBase<T>
+    {       
         public virtual void Awake()
         {
-            Instance = (T) this;
+
         }
 
         public virtual void Start()
