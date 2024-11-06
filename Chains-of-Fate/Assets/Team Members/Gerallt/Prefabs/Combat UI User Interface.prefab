@@ -1,5 +1,42 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &32450939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 32450940}
+  m_Layer: 0
+  m_Name: Player Self Potrait
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &32450940
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32450939}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1328304523}
+  m_Father: {fileID: 8932487335790032842}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &88865795
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,6 +1185,82 @@ Transform:
   m_Father: {fileID: 5577777372788091692}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1328304522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1328304523}
+  - component: {fileID: 1328304525}
+  - component: {fileID: 1328304524}
+  m_Layer: 0
+  m_Name: Image Player Portrait (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1328304523
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328304522}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 32450940}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -136.746, y: -50.254}
+  m_SizeDelta: {x: 116.2034, y: 116.2034}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1328304525
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328304522}
+  m_CullTransparentMesh: 1
+--- !u!114 &1328304524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328304522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 8b689e3e8568df04e8691510afaf987a, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: f76a6a71ac660864c83ff2aba13723a7, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1401972728
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,7 +1592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerButtons: {fileID: 7720193409779544330}
-  EnemyParty: {fileID: 0}
+  EnemyParty: {fileID: 361305438635753913}
   Buttons:
   - {fileID: 8490097209553993072}
   - {fileID: 5198468433749582497}
@@ -5024,12 +5137,13 @@ GameObject:
   - component: {fileID: 1347460206975167686}
   - component: {fileID: 109103969}
   - component: {fileID: 1070474340}
-  - component: {fileID: 1070474343}
-  - component: {fileID: 1070474344}
-  - component: {fileID: 1070474345}
-  - component: {fileID: 1070474346}
-  - component: {fileID: 1070474347}
-  - component: {fileID: 1070474348}
+  - component: {fileID: 1803912982}
+  - component: {fileID: 1803912983}
+  - component: {fileID: 1803912984}
+  - component: {fileID: 1803912985}
+  - component: {fileID: 1803912986}
+  - component: {fileID: 1803912987}
+  - component: {fileID: 1194320707}
   m_Layer: 0
   m_Name: Test enemy level 1 ATTACKER
   m_TagString: Untagged
@@ -5073,12 +5187,12 @@ MonoBehaviour:
   - {fileID: 8008659688591539871}
   availableSpells: []
   availableItems: []
-  healthStat: {fileID: 1070474346}
-  arcanaStat: {fileID: 1070474348}
-  resolveStat: {fileID: 1070474345}
-  wisdomStat: {fileID: 1070474343}
-  defenseStat: {fileID: 1070474347}
-  strengthStat: {fileID: 1070474344}
+  healthStat: {fileID: 1803912985}
+  arcanaStat: {fileID: 1803912987}
+  resolveStat: {fileID: 1803912984}
+  wisdomStat: {fileID: 1803912982}
+  defenseStat: {fileID: 1803912986}
+  strengthStat: {fileID: 1803912983}
   characterName: AI Brute
   speed: 1
   movementSpeed: 1
@@ -5108,7 +5222,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1070474343
+--- !u!114 &1803912982
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5117,22 +5231,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 3961865873209156455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 436e289f23494ae2ae52daf0920d9051, type: 3}
+  m_Script: {fileID: 11500000, guid: aa078cf3c46a12643a89ad22858e2a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  minValue: 0
-  maxValue: 0
-  absoluteMax: 0
-  defaultValue: 0
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: WIS
---- !u!114 &1070474344
+  ownerCharacterBase: {fileID: 109103969}
+--- !u!114 &1803912983
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5141,22 +5275,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 3961865873209156455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a034c3105f274096925a0ed44f4a96f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 042a7dc3bd65ae34ea0ca50253d3cea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  minValue: 0
-  maxValue: 0
-  absoluteMax: 0
-  defaultValue: 0
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: Strength
---- !u!114 &1070474345
+  ownerCharacterBase: {fileID: 109103969}
+--- !u!114 &1803912984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5165,22 +5319,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 3961865873209156455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99288fd4b6f64312bcddc0a58e34deed, type: 3}
+  m_Script: {fileID: 11500000, guid: e40fc2bfa41be78448952ccc4b93d4e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  minValue: 0
-  maxValue: 0
-  absoluteMax: 0
-  defaultValue: 0
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: RES
---- !u!114 &1070474346
+  ownerCharacterBase: {fileID: 109103969}
+--- !u!114 &1803912985
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5189,22 +5363,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 3961865873209156455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d48b6d0cb899476ab39cea81f54e553f, type: 3}
+  m_Script: {fileID: 11500000, guid: 08021491bfc38a845b5a60e2161e91ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  minValue: 0
-  maxValue: 50
-  absoluteMax: 50
-  defaultValue: 50
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: HP
---- !u!114 &1070474347
+  ownerCharacterBase: {fileID: 109103969}
+--- !u!114 &1803912986
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5213,22 +5407,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 3961865873209156455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a0b088d55984cf1a91d4058bbbed20b, type: 3}
+  m_Script: {fileID: 11500000, guid: fd646be18cc16594fba0b1628b2b39ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  minValue: 0
-  maxValue: 0
-  absoluteMax: 0
-  defaultValue: 0
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: DEF
---- !u!114 &1070474348
+  ownerCharacterBase: {fileID: 109103969}
+--- !u!114 &1803912987
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5237,21 +5451,93 @@ MonoBehaviour:
   m_GameObject: {fileID: 3961865873209156455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77604e6bea5e4cbe965f157d23a5a4db, type: 3}
+  m_Script: {fileID: 11500000, guid: ed34735508637d44791583f76d5db54f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  minValue: 0
-  maxValue: 0
-  absoluteMax: 0
-  defaultValue: 0
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: ARC
+  ownerCharacterBase: {fileID: 109103969}
+--- !u!212 &1194320707
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3961865873209156455}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ed5e66e514adc0641b328fe939254344, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -2034050035, guid: e5586c9597feec34db4642f29119efba, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &4218571571828520949
 GameObject:
   m_ObjectHideFlags: 0
@@ -5724,12 +6010,13 @@ GameObject:
   - component: {fileID: 2278204885123017614}
   - component: {fileID: 1128030694}
   - component: {fileID: 895692784}
-  - component: {fileID: 895692787}
-  - component: {fileID: 895692788}
-  - component: {fileID: 895692789}
-  - component: {fileID: 895692790}
-  - component: {fileID: 895692791}
-  - component: {fileID: 895692792}
+  - component: {fileID: 21564623}
+  - component: {fileID: 21564624}
+  - component: {fileID: 21564625}
+  - component: {fileID: 21564626}
+  - component: {fileID: 21564627}
+  - component: {fileID: 21564628}
+  - component: {fileID: 837495174}
   m_Layer: 0
   m_Name: Test enemy level 1 DEFENDER
   m_TagString: Untagged
@@ -5773,12 +6060,12 @@ MonoBehaviour:
   - {fileID: 1565924526644392015}
   availableSpells: []
   availableItems: []
-  healthStat: {fileID: 895692790}
-  arcanaStat: {fileID: 895692792}
-  resolveStat: {fileID: 895692789}
-  wisdomStat: {fileID: 895692787}
-  defenseStat: {fileID: 895692791}
-  strengthStat: {fileID: 895692788}
+  healthStat: {fileID: 21564626}
+  arcanaStat: {fileID: 21564628}
+  resolveStat: {fileID: 21564625}
+  wisdomStat: {fileID: 21564623}
+  defenseStat: {fileID: 21564627}
+  strengthStat: {fileID: 21564624}
   characterName: AI Defender
   speed: 1
   movementSpeed: 1
@@ -5808,7 +6095,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &895692787
+--- !u!114 &21564623
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5817,22 +6104,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 4948662849342422133}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 436e289f23494ae2ae52daf0920d9051, type: 3}
+  m_Script: {fileID: 11500000, guid: aa078cf3c46a12643a89ad22858e2a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  minValue: 0
-  maxValue: 0
-  absoluteMax: 0
-  defaultValue: 0
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: WIS
---- !u!114 &895692788
+  ownerCharacterBase: {fileID: 1128030694}
+--- !u!114 &21564624
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5841,22 +6148,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 4948662849342422133}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a034c3105f274096925a0ed44f4a96f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 042a7dc3bd65ae34ea0ca50253d3cea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  minValue: 0
-  maxValue: 0
-  absoluteMax: 0
-  defaultValue: 0
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: Strength
---- !u!114 &895692789
+  ownerCharacterBase: {fileID: 1128030694}
+--- !u!114 &21564625
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5865,22 +6192,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 4948662849342422133}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99288fd4b6f64312bcddc0a58e34deed, type: 3}
+  m_Script: {fileID: 11500000, guid: e40fc2bfa41be78448952ccc4b93d4e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  minValue: 0
-  maxValue: 0
-  absoluteMax: 0
-  defaultValue: 0
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: RES
---- !u!114 &895692790
+  ownerCharacterBase: {fileID: 1128030694}
+--- !u!114 &21564626
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5889,22 +6236,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 4948662849342422133}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d48b6d0cb899476ab39cea81f54e553f, type: 3}
+  m_Script: {fileID: 11500000, guid: 08021491bfc38a845b5a60e2161e91ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  minValue: 0
-  maxValue: 100
-  absoluteMax: 100
-  defaultValue: 100
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: HP
---- !u!114 &895692791
+  ownerCharacterBase: {fileID: 1128030694}
+--- !u!114 &21564627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5913,22 +6280,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 4948662849342422133}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a0b088d55984cf1a91d4058bbbed20b, type: 3}
+  m_Script: {fileID: 11500000, guid: fd646be18cc16594fba0b1628b2b39ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  minValue: 0
-  maxValue: 0
-  absoluteMax: 0
-  defaultValue: 0
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: DEF
---- !u!114 &895692792
+  ownerCharacterBase: {fileID: 1128030694}
+--- !u!114 &21564628
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5937,21 +6324,93 @@ MonoBehaviour:
   m_GameObject: {fileID: 4948662849342422133}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77604e6bea5e4cbe965f157d23a5a4db, type: 3}
+  m_Script: {fileID: 11500000, guid: ed34735508637d44791583f76d5db54f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  minValue: 0
-  maxValue: 0
-  absoluteMax: 0
-  defaultValue: 0
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: ARC
+  ownerCharacterBase: {fileID: 1128030694}
+--- !u!212 &837495174
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4948662849342422133}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ed5e66e514adc0641b328fe939254344, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 479469361, guid: e5586c9597feec34db4642f29119efba, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &5198468433749582497
 GameObject:
   m_ObjectHideFlags: 0
@@ -7843,12 +8302,13 @@ GameObject:
   - component: {fileID: 5577777372788091692}
   - component: {fileID: 6008471892693008037}
   - component: {fileID: 1766553952}
-  - component: {fileID: 1766553946}
-  - component: {fileID: 1766553947}
-  - component: {fileID: 1766553948}
-  - component: {fileID: 1766553949}
-  - component: {fileID: 1766553950}
-  - component: {fileID: 1766553951}
+  - component: {fileID: 1899443262}
+  - component: {fileID: 1899443263}
+  - component: {fileID: 1899443264}
+  - component: {fileID: 1899443265}
+  - component: {fileID: 1899443266}
+  - component: {fileID: 1899443267}
+  - component: {fileID: 1003952563}
   m_Layer: 0
   m_Name: Test Player
   m_TagString: Untagged
@@ -7896,12 +8356,12 @@ MonoBehaviour:
   - {fileID: 1407503156}
   availableItems:
   - {fileID: 8541742657987700007}
-  healthStat: {fileID: 1766553949}
-  arcanaStat: {fileID: 1766553951}
-  resolveStat: {fileID: 1766553950}
-  wisdomStat: {fileID: 1766553948}
-  defenseStat: {fileID: 1766553946}
-  strengthStat: {fileID: 1766553947}
+  healthStat: {fileID: 1899443267}
+  arcanaStat: {fileID: 1899443262}
+  resolveStat: {fileID: 1899443266}
+  wisdomStat: {fileID: 1899443264}
+  defenseStat: {fileID: 1899443263}
+  strengthStat: {fileID: 1899443265}
   characterName: test player
   speed: 1
   movementSpeed: 1
@@ -7933,7 +8393,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1766553946
+--- !u!114 &1899443262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7942,22 +8402,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 7185347120866322300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a0b088d55984cf1a91d4058bbbed20b, type: 3}
+  m_Script: {fileID: 11500000, guid: ed34735508637d44791583f76d5db54f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
-  minValue: 10
-  maxValue: 10
-  absoluteMax: 10
-  defaultValue: 10
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: DEF
---- !u!114 &1766553947
+  ownerCharacterBase: {fileID: 6008471892693008037}
+--- !u!114 &1899443263
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7966,22 +8446,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 7185347120866322300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a034c3105f274096925a0ed44f4a96f0, type: 3}
+  m_Script: {fileID: 11500000, guid: fd646be18cc16594fba0b1628b2b39ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
-  minValue: 10
-  maxValue: 10
-  absoluteMax: 10
-  defaultValue: 10
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: Strength
---- !u!114 &1766553948
+  ownerCharacterBase: {fileID: 6008471892693008037}
+--- !u!114 &1899443264
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7990,22 +8490,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 7185347120866322300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 436e289f23494ae2ae52daf0920d9051, type: 3}
+  m_Script: {fileID: 11500000, guid: aa078cf3c46a12643a89ad22858e2a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
-  minValue: 10
-  maxValue: 10
-  absoluteMax: 10
-  defaultValue: 10
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: WIS
---- !u!114 &1766553949
+  ownerCharacterBase: {fileID: 6008471892693008037}
+--- !u!114 &1899443265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8014,22 +8534,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 7185347120866322300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d48b6d0cb899476ab39cea81f54e553f, type: 3}
+  m_Script: {fileID: 11500000, guid: 042a7dc3bd65ae34ea0ca50253d3cea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
-  minValue: 10
-  maxValue: 10
-  absoluteMax: 10
-  defaultValue: 10
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: HP
---- !u!114 &1766553950
+  ownerCharacterBase: {fileID: 6008471892693008037}
+--- !u!114 &1899443266
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8038,22 +8578,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 7185347120866322300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99288fd4b6f64312bcddc0a58e34deed, type: 3}
+  m_Script: {fileID: 11500000, guid: e40fc2bfa41be78448952ccc4b93d4e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
-  minValue: 10
-  maxValue: 10
-  absoluteMax: 10
-  defaultValue: 10
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: RES
---- !u!114 &1766553951
+  ownerCharacterBase: {fileID: 6008471892693008037}
+--- !u!114 &1899443267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8062,21 +8622,93 @@ MonoBehaviour:
   m_GameObject: {fileID: 7185347120866322300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77604e6bea5e4cbe965f157d23a5a4db, type: 3}
+  m_Script: {fileID: 11500000, guid: 08021491bfc38a845b5a60e2161e91ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
-  minValue: 10
-  maxValue: 10
-  absoluteMax: 10
-  defaultValue: 10
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: ARC
+  ownerCharacterBase: {fileID: 6008471892693008037}
+--- !u!212 &1003952563
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7185347120866322300}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 7c3cf40f79adad04ca119ce63e3801ca, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 1865761435, guid: 5c835b874c16357468ca34d7b56b92ee, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.6875, y: 0.984375}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &7257001447562412004
 GameObject:
   m_ObjectHideFlags: 0
@@ -8151,9 +8783,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -17, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1828075004679983552
 CanvasRenderer:
@@ -8241,6 +8873,7 @@ RectTransform:
   - {fileID: 7474598200085920789}
   - {fileID: 7036621477686786581}
   - {fileID: 7613036104689313290}
+  - {fileID: 32450940}
   m_Father: {fileID: 7720193409298343076}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9061,7 +9694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7720193409614603902
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10156,9 +10789,12 @@ MonoBehaviour:
   isLoaded: 0
   isTestMode: 1
   EnemyTeam: {fileID: 3721713797779047524}
-  enemies: []
-  partyMembers: []
-  player: {fileID: 0}
+  enemies:
+  - {fileID: 3961865873209156455}
+  - {fileID: 4948662849342422133}
+  partyMembers:
+  - {fileID: 8901707828922709885}
+  player: {fileID: 7185347120866322300}
 --- !u!1 &7720193410693242325
 GameObject:
   m_ObjectHideFlags: 0
@@ -10878,8 +11514,8 @@ RectTransform:
   m_Father: {fileID: 8856166611521835426}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.60333335}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11348,12 +11984,13 @@ GameObject:
   - component: {fileID: 4645213537585750343}
   - component: {fileID: 9204787735287432377}
   - component: {fileID: 598818012}
-  - component: {fileID: 598818015}
-  - component: {fileID: 598818016}
-  - component: {fileID: 598818017}
-  - component: {fileID: 598818018}
-  - component: {fileID: 598818019}
-  - component: {fileID: 598818020}
+  - component: {fileID: 912285629}
+  - component: {fileID: 912285630}
+  - component: {fileID: 912285631}
+  - component: {fileID: 912285632}
+  - component: {fileID: 912285633}
+  - component: {fileID: 912285634}
+  - component: {fileID: 886759443}
   m_Layer: 0
   m_Name: Test party member level 1
   m_TagString: Untagged
@@ -11397,12 +12034,12 @@ MonoBehaviour:
   - {fileID: 5205562182073110542}
   availableSpells: []
   availableItems: []
-  healthStat: {fileID: 598818018}
-  arcanaStat: {fileID: 598818020}
-  resolveStat: {fileID: 598818017}
-  wisdomStat: {fileID: 598818015}
-  defenseStat: {fileID: 598818019}
-  strengthStat: {fileID: 598818016}
+  healthStat: {fileID: 912285632}
+  arcanaStat: {fileID: 912285634}
+  resolveStat: {fileID: 912285631}
+  wisdomStat: {fileID: 912285629}
+  defenseStat: {fileID: 912285633}
+  strengthStat: {fileID: 912285630}
   characterName: Friend
   speed: 1
   movementSpeed: 1
@@ -11434,7 +12071,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &598818015
+--- !u!114 &912285629
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11443,22 +12080,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 8901707828922709885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 436e289f23494ae2ae52daf0920d9051, type: 3}
+  m_Script: {fileID: 11500000, guid: aa078cf3c46a12643a89ad22858e2a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  minValue: 0
-  maxValue: 0
-  absoluteMax: 0
-  defaultValue: 0
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: WIS
---- !u!114 &598818016
+  ownerCharacterBase: {fileID: 9204787735287432377}
+--- !u!114 &912285630
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11467,22 +12124,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 8901707828922709885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a034c3105f274096925a0ed44f4a96f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 042a7dc3bd65ae34ea0ca50253d3cea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  minValue: 0
-  maxValue: 0
-  absoluteMax: 0
-  defaultValue: 0
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: Strength
---- !u!114 &598818017
+  ownerCharacterBase: {fileID: 9204787735287432377}
+--- !u!114 &912285631
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11491,22 +12168,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 8901707828922709885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99288fd4b6f64312bcddc0a58e34deed, type: 3}
+  m_Script: {fileID: 11500000, guid: e40fc2bfa41be78448952ccc4b93d4e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  minValue: 0
-  maxValue: 0
-  absoluteMax: 0
-  defaultValue: 0
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: RES
---- !u!114 &598818018
+  ownerCharacterBase: {fileID: 9204787735287432377}
+--- !u!114 &912285632
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11515,22 +12212,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 8901707828922709885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d48b6d0cb899476ab39cea81f54e553f, type: 3}
+  m_Script: {fileID: 11500000, guid: 08021491bfc38a845b5a60e2161e91ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  minValue: 0
-  maxValue: 0
-  absoluteMax: 0
-  defaultValue: 0
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: HP
---- !u!114 &598818019
+  ownerCharacterBase: {fileID: 9204787735287432377}
+--- !u!114 &912285633
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11539,22 +12256,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 8901707828922709885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a0b088d55984cf1a91d4058bbbed20b, type: 3}
+  m_Script: {fileID: 11500000, guid: fd646be18cc16594fba0b1628b2b39ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  minValue: 0
-  maxValue: 0
-  absoluteMax: 0
-  defaultValue: 0
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: DEF
---- !u!114 &598818020
+  ownerCharacterBase: {fileID: 9204787735287432377}
+--- !u!114 &912285634
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11563,21 +12300,93 @@ MonoBehaviour:
   m_GameObject: {fileID: 8901707828922709885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77604e6bea5e4cbe965f157d23a5a4db, type: 3}
+  m_Script: {fileID: 11500000, guid: ed34735508637d44791583f76d5db54f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
-  minValue: 0
-  maxValue: 0
-  absoluteMax: 0
-  defaultValue: 0
-  levelingCurve:
+  AbsoluteMaximum: 1000
+  MaxValue: 100
+  StartingValue: 100
+  Value: 100
+  Level: 0
+  StartingLevel: 0
+  MaxLevel: 100
+  animationLevelingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  statName: ARC
+  ownerCharacterBase: {fileID: 9204787735287432377}
+--- !u!212 &886759443
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8901707828922709885}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d0eb0436f66acc54fb8cfbd3a5d29202, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 2feaad7486a99074c91e13661405f8b7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.71875, y: 0.796875}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &9048446092721762037
 GameObject:
   m_ObjectHideFlags: 0
