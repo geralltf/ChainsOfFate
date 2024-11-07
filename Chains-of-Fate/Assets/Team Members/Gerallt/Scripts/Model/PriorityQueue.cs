@@ -261,11 +261,16 @@ namespace ChainsOfFate.Gerallt
         public void Clear()
         {
             // Unsubscribe from character stat updates.
-            foreach (CharacterBase character in queue)
+            if (queue != null)
             {
-                character.OnStatChanged -= CharacterBase_OnStatChanged;
+                foreach (CharacterBase character in queue)
+                {
+                    if (character != null)
+                    {
+                        character.OnStatChanged -= CharacterBase_OnStatChanged;
+                    }
+                }
             }
-
             queue.Clear();
 
             // Update UI.

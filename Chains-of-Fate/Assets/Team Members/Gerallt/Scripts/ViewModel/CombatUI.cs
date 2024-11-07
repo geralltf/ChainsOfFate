@@ -119,15 +119,18 @@ namespace ChainsOfFate.Gerallt
 
         public void PopulateEnemyTeam(List<GameObject> _enemies)
         {
-	        for (int i = 0; i < EnemyTeam.childCount; i++)
-	        {
-		        Destroy(EnemyTeam.GetChild(i).gameObject);
-	        }
-	        
-	        foreach (GameObject t in _enemies)
-	        {
-		        Instantiate(t, EnemyTeam);
-	        }
+            if (!isTestMode)
+            {
+                for (int i = 0; i < EnemyTeam.childCount; i++)
+                {
+                    Destroy(EnemyTeam.GetChild(i).gameObject);
+                }
+
+                foreach (GameObject t in _enemies)
+                {
+                    Instantiate(t, EnemyTeam);
+                }
+            }
         }
     }
 

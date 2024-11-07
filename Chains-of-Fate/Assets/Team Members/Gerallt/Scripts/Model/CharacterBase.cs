@@ -701,26 +701,29 @@ namespace ChainsOfFate.Gerallt
         
         public void FixedUpdate()
         {
-            Vector3 oldPos = trans.position;
-            oldPos.z = GameManager.Instance.spawnZ; // HACK: Changed by DebugUI when camera mode changes
-
-            //cameraTransform = Camera.main.transform;
-
-            if (GameManager.Instance.cameraMode == GameManager.CameraMode.Isometric)
+            if (GameManager.Instance != null)
             {
-                oldPos.z = GameManager.Instance.spawnOrthoZ;
-            }
-            else
-            {
-                oldPos.z = GameManager.Instance.spawnPerspectiveZ;
-            }
-            trans.position = oldPos;
+                Vector3 oldPos = trans.position;
+                oldPos.z = GameManager.Instance.spawnZ; // HACK: Changed by DebugUI when camera mode changes
 
-            ApplyOffsets();
-            
-            //rb.velocity = Vector2.zero; // HACK: Cancel any unwanted velocities!
+                //cameraTransform = Camera.main.transform;
 
-            // ^ this thing above causes console to be flooded with warnings for the dialogue interactables, so I disabled it & it works fine. - Charlie
+                if (GameManager.Instance.cameraMode == GameManager.CameraMode.Isometric)
+                {
+                    oldPos.z = GameManager.Instance.spawnOrthoZ;
+                }
+                else
+                {
+                    oldPos.z = GameManager.Instance.spawnPerspectiveZ;
+                }
+                trans.position = oldPos;
+
+                ApplyOffsets();
+
+                //rb.velocity = Vector2.zero; // HACK: Cancel any unwanted velocities!
+
+                // ^ this thing above causes console to be flooded with warnings for the dialogue interactables, so I disabled it & it works fine. - Charlie
+            }
         }
 
         public void ApplyOffsets()

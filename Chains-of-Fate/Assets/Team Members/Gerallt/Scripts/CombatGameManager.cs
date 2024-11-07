@@ -88,7 +88,10 @@ namespace ChainsOfFate.Gerallt
             var queueOld = turnsQueue.ToList();
             foreach (CharacterBase character in queueOld)
             {
-                character.OnStatChanged -= Character_OnStatChanged;
+                if (character != null)
+                {
+                    character.OnStatChanged -= Character_OnStatChanged;
+                }
             }
 
             turnsQueue.Clear();
