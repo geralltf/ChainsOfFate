@@ -90,6 +90,12 @@ namespace ChainsOfFate.Gerallt
                 wisdomBar.value = (float) newValue;
             }
 
+            SpriteRenderer spriteRenderer = character.GetComponent<SpriteRenderer>();
+            if(spriteRenderer != null)
+            {
+                playerPortrait.sprite = spriteRenderer.sprite;
+            }
+
             playerPortrait.color = character.representation;
         }
     }
