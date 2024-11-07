@@ -300,7 +300,7 @@ namespace ChainsOfFate.Gerallt
 
                 PriorityQueueNode node = nodeInstance.GetComponent<PriorityQueueNode>();
 
-                if (queue.Any(c => c.ID == node.id))
+                if (queue.Any(c => c!= null && c.ID == node.id))
                 {
                     RectTransform rectTransform = nodeInstance.GetComponent<RectTransform>();
                     Vector3 pos;
@@ -330,20 +330,24 @@ namespace ChainsOfFate.Gerallt
             for (int i = 0; i < queue.Count; i++)
             {
                 CharacterBase character = queue[i];
+                if (character == null) continue;
 
                 GameObject nodeInstance = Instantiate(nodePrefab, contentParent);
                 Image image = nodeInstance.GetComponentInChildren<Image>();
 
                 SpriteRenderer characterSpriteRenderer = character.GetComponentInChildren<SpriteRenderer>();
-                Color representation = character.representation;
-                //representation.a = 1;
-                
-                if (characterSpriteRenderer != null)
+                if(characterSpriteRenderer != null)
                 {
-                    image.sprite = characterSpriteRenderer.sprite;
+                    Color representation = character.representation;
+                    //representation.a = 1;
+
+                    if (characterSpriteRenderer != null)
+                    {
+                        image.sprite = characterSpriteRenderer.sprite;
+                    }
+                    image.color = representation;
                 }
-                image.color = representation;
-                
+
                 nodeInstance.GetComponentInChildren<TextMeshProUGUI>().text = character.CharacterName;
                 PriorityQueueNode node = nodeInstance.GetComponent<PriorityQueueNode>();
                 node.id = character.ID;
