@@ -17,7 +17,11 @@ public class PlayerController : MonoBehaviour
     public event Action OnReady;
 
     [SerializeField] private SpriteRenderer characterSpriteRenderer;
-    
+
+    [SerializeField] private Camera _mainCamera;
+    [SerializeField] private float cameraZ;
+    [SerializeField] private float cameraMovementSpeed;
+
     private CombatUI CUI;
     public Vector2 move;
     private Rigidbody2D rb;
@@ -32,28 +36,37 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateSprite(Vector2 pos)
     {
-        /*if (pos.x < 0)
-        {
-            flipState = true;
-        }
-        else
-        {
-            flipState = false;
-        }
+        //if (pos.x < 0)
+        //{
+        //    flipState = true;
+        //}
+        //else
+        //{
+        //    flipState = false;
+        //}
 
-        if (flipState != characterSpriteRenderer.flipX)
-        {
-            characterSpriteRenderer.flipX = flipState;
-        }
+        //if (flipState != characterSpriteRenderer.flipX)
+        //{
+        //    characterSpriteRenderer.flipX = flipState;
+        //}
 
-        characterSpriteRenderer.transform.rotation = Quaternion.identity;*/
+        //characterSpriteRenderer.transform.rotation = Quaternion.identity;
+    }
+
+    void MovementFromControls(InputAction.CallbackContext ctx)
+    {
+        move = ctx.ReadValue<Vector2>(); //on button press gets the movement value and starts the movement
+    }
+    void CancelMovementFromControls(InputAction.CallbackContext ctx)
+    {
+        move = Vector2.zero; //on button release stops movement
     }
 
     private void Awake()
     {
         controls = new CoFPlayerControls();
-        controls.Player.Movement.performed += ctx => move = ctx.ReadValue<Vector2>(); //on button press gets the movement value and starts the movement
-        controls.Player.Movement.canceled += ctx => move = Vector2.zero; //on button release stops movement
+        controls.Player.Movement.performed += ctx => MovementFromControls(ctx);
+        controls.Player.Movement.canceled += ctx => CancelMovementFromControls(ctx);
         //DontDestroyOnLoad(this);
         controls.Player.Interact.performed += Interact;
 
@@ -101,7 +114,7 @@ public class PlayerController : MonoBehaviour
         
             // Switched to a rigidbody version instead of directly affecting transform
             // because there's a 2D collision system using 2D Colliders
-            rb.MovePosition(rb.position + movement);
+            rb.MovePosition(rb.position + (movement.normalized * speed * player.MovementSpeed));
             
             //rb.AddRelativeForce(movement, ForceMode2D.Force);
             //rb.AddRelativeForce(movement, ForceMode2D.Impulse);
@@ -123,6 +136,12 @@ public class PlayerController : MonoBehaviour
             playerMoving = false;
             animator.SetBool("isMoving", false);
             //mariaAnim.SetBool("isMoving", false);//if there is no movement isMoving is set to false which sets the animator state to idle.
+        }
+
+        if (_mainCamera != null)
+        {
+            _mainCamera.transform.position = Vector3.Lerp(_mainCamera.transform.position, rb.position, Time.fixedDeltaTime * cameraMovementSpeed);
+            _mainCamera.transform.position = new Vector3(_mainCamera.transform.position.x, _mainCamera.transform.position.y, cameraZ);
         }
     }
 
