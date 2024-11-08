@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8546cf86e8e289046add188a400fcf0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.01
+  speed: 0.5
   defaultSpawnLocation: {x: 0, y: 0, z: 0}
   characterSpriteRenderer: {fileID: 1044486542433268047}
   _mainCamera: {fileID: 0}

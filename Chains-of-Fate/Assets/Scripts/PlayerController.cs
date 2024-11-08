@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using ChainsOfFate.Gerallt;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -34,23 +35,50 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
     public string areaTransitionName;
 
+    public RuntimeAnimatorController newControllerWalk;
+    public RuntimeAnimatorController newControllerAttack;
+    public RuntimeAnimatorController newControllerUseItem;
+
+    private AnimControllerState animControllerState = AnimControllerState.Walking;
+
+    public enum AnimControllerState
+    {
+        Walking,
+        Attack,
+        UseItem
+    }
+
     private void UpdateSprite(Vector2 pos)
     {
-        //if (pos.x < 0)
-        //{
-        //    flipState = true;
-        //}
-        //else
-        //{
-        //    flipState = false;
-        //}
+        if (animControllerState == AnimControllerState.Attack || animControllerState == AnimControllerState.UseItem)
+        {
+            if (pos.x < 0)
+            {
+                flipState = true;
+            }
+            else
+            {
+                flipState = false;
+            }
 
-        //if (flipState != characterSpriteRenderer.flipX)
-        //{
-        //    characterSpriteRenderer.flipX = flipState;
-        //}
+            if (flipState != characterSpriteRenderer.flipX)
+            {
+                characterSpriteRenderer.flipX = flipState;
+            }
 
-        //characterSpriteRenderer.transform.rotation = Quaternion.identity;
+            characterSpriteRenderer.transform.rotation = Quaternion.identity;
+        }
+        else
+        {
+            flipState = false;
+
+            if (flipState != characterSpriteRenderer.flipX)
+            {
+                characterSpriteRenderer.flipX = flipState;
+            }
+
+            characterSpriteRenderer.transform.rotation = Quaternion.identity;
+        }
     }
 
     void MovementFromControls(InputAction.CallbackContext ctx)
@@ -69,6 +97,9 @@ public class PlayerController : MonoBehaviour
         controls.Player.Movement.canceled += ctx => CancelMovementFromControls(ctx);
         //DontDestroyOnLoad(this);
         controls.Player.Interact.performed += Interact;
+
+        controls.Player.Attack.performed += Attack_performed;
+        controls.Player.UseItem.performed += UseItem_performed;
 
         rb = GetComponent<Rigidbody2D>();
 
@@ -114,7 +145,7 @@ public class PlayerController : MonoBehaviour
         
             // Switched to a rigidbody version instead of directly affecting transform
             // because there's a 2D collision system using 2D Colliders
-            rb.MovePosition(rb.position + (movement.normalized * speed * player.MovementSpeed));
+            rb.MovePosition(rb.position + movement);
             
             //rb.AddRelativeForce(movement, ForceMode2D.Force);
             //rb.AddRelativeForce(movement, ForceMode2D.Impulse);
@@ -138,15 +169,44 @@ public class PlayerController : MonoBehaviour
             //mariaAnim.SetBool("isMoving", false);//if there is no movement isMoving is set to false which sets the animator state to idle.
         }
 
+        //if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)// && !animator.IsInTransition(0))
+        //if(animator.GetCurrentAnimatorStateInfo(0).length > animator.GetCurrentAnimatorStateInfo(0).normalizedTime)
+        //if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animator.IsInTransition(0))
+        if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+        {
+            if(animControllerState == AnimControllerState.Attack || animControllerState == AnimControllerState.UseItem)
+            {
+                animator.runtimeAnimatorController = newControllerWalk;
+
+                animControllerState = AnimControllerState.Walking;
+            }
+        }
+
         if (_mainCamera != null)
         {
             _mainCamera.transform.position = Vector3.Lerp(_mainCamera.transform.position, rb.position, Time.fixedDeltaTime * cameraMovementSpeed);
             _mainCamera.transform.position = new Vector3(_mainCamera.transform.position.x, _mainCamera.transform.position.y, cameraZ);
         }
+
+
     }
 
     private void Interact(InputAction.CallbackContext context)
     {
 	    _interactBox.InteractEvent?.Invoke();
+    }
+
+    private void UseItem_performed(InputAction.CallbackContext context)
+    {
+        animator.runtimeAnimatorController = newControllerUseItem;
+        //animator.Play();
+        animControllerState = AnimControllerState.UseItem;
+    }
+
+    private void Attack_performed(InputAction.CallbackContext context)
+    {
+        animator.runtimeAnimatorController = newControllerAttack;
+
+        animControllerState = AnimControllerState.Attack;
     }
 }
