@@ -96,9 +96,14 @@ namespace ChainsOfFate.Gerallt
             if (talkingToCharacter is Champion)
             {
                 buttonAddPartyMember.gameObject.SetActive(false);
-                
-                FriendlyNPC friendlyNpc = talkingToCharacter.GetComponent<FriendlyNPC>();
 
+                FriendlyNPC npcTalkingTo = yarnInteractable.GetComponent<FriendlyNPC>();
+                npcTalkingTo.AddAsPartyMember();
+
+
+                //FriendlyNPC friendlyNpc = talkingToCharacter.GetComponent<FriendlyNPC>();
+
+                //friendlyNpc.AddAsPartyMember();
                 //friendlyNpc.AddAsPartyMember(player);
             }
         }
@@ -220,8 +225,8 @@ namespace ChainsOfFate.Gerallt
                     {
                         Hide();
                     }
-
-                    if (dialogueOption.TextID == "line:Assets/Dialogue/COF-Maria.yarn-MariaStart-8"
+                    // "line:Assets/Dialogue/COF_Maria.yarn-MariaStart-8"
+                    if (dialogueOption.TextID == "line:Assets/Dialogue/COF_Maria.yarn-MariaStart-8"
                         || dialogueOption.TextID == "line:Assets/Dialogue/COF-Bann'jo.yarn-BannjoStart-17") // HACK: Yarn needs to provide a better way to identify options by name or ID. So if script line numbers change the code doesn't have to
                     {
                         AddPartyMember();
