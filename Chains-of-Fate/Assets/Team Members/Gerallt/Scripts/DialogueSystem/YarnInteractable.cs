@@ -28,7 +28,7 @@ public class YarnInteractable : MonoBehaviour
         Debug.Log($"Started conversation with {name}.");
         isCurrentConversation = true;
 
-        instance.start();                                           //FMOD start sound - currently at the beginning of the box, not the text
+        //instance.start();                                           //FMOD start sound - currently at the beginning of the box, not the text
 
         dialogueRunner.StartDialogue(conversationStartNode);
     }
@@ -42,7 +42,7 @@ public class YarnInteractable : MonoBehaviour
 
             dialogueRunner.Stop();
 
-            instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);         //FMOD stop sound - currently at the end of the box, not the text
+            //instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);         //FMOD stop sound - currently at the end of the box, not the text
         }
     }
 
@@ -66,7 +66,7 @@ public class YarnInteractable : MonoBehaviour
     private void Start()
     {
  
-        instance = RuntimeManager.CreateInstance(fmodEvent);
+        //instance = RuntimeManager.CreateInstance(fmodEvent);
 
         if (dialogueRunner == null)
         {

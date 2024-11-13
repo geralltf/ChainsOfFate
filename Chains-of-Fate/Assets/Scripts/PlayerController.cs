@@ -146,26 +146,34 @@ public class PlayerController : MonoBehaviour
             // Switched to a rigidbody version instead of directly affecting transform
             // because there's a 2D collision system using 2D Colliders
             rb.MovePosition(rb.position + movement);
-            
+
             //rb.AddRelativeForce(movement, ForceMode2D.Force);
             //rb.AddRelativeForce(movement, ForceMode2D.Impulse);
             //rb.velocity += movement;
 
             UpdateSprite(movement);
 
-            animator.SetFloat("Horizontal", move.x); //code that checks the movement direction for the animator to use for displaying the walking animations
-            animator.SetFloat("Vertical", move.y);
-
             //mariaAnim.SetFloat("Horizontal", move.x); 
             //mariaAnim.SetFloat("Vertical", move.y);
+            //animator.runtimeAnimatorController
 
-            animator.SetBool("isMoving", true);
-            //mariaAnim.SetBool("isMoving", true);
+            if(animControllerState == AnimControllerState.Walking)
+            {
+                animator.SetFloat("Horizontal", move.x); //code that checks the movement direction for the animator to use for displaying the walking animations
+                animator.SetFloat("Vertical", move.y);
+
+                animator.SetBool("isMoving", true);
+                //mariaAnim.SetBool("isMoving", true);
+            }
         }
         else
         {
             playerMoving = false;
-            animator.SetBool("isMoving", false);
+
+            if (animControllerState == AnimControllerState.Walking)
+            {
+                animator.SetBool("isMoving", false);
+            }
             //mariaAnim.SetBool("isMoving", false);//if there is no movement isMoving is set to false which sets the animator state to idle.
         }
 

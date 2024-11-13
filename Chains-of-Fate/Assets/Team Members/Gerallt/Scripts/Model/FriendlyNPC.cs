@@ -34,6 +34,10 @@ namespace ChainsOfFate.Gerallt
 
         [SerializeField] private GameObject viewGreetInteractButtons;
 
+        [SerializeField] private GameObject dialogueSystemUI;
+
+        private CoFPlayerControls controls;
+
         public bool isPartyMember = false;
         public Transform playerTarget;
         public Champion championTarget;
@@ -64,6 +68,22 @@ namespace ChainsOfFate.Gerallt
             GreetPlayer,
             FollowingPlayer,
             TalkingToPlayer
+        }
+
+        private void Interact_performed(InputAction.CallbackContext context)
+        {
+            if ((state is NpcState.GreetPlayer or NpcState.TalkingToPlayer) && yarnInteractable.interactable)
+            {
+                if (!inDialogue && canEnterDialogue)
+                {
+                    //StartCoroutine(StartDialogueCoroutine());
+                    yarnInteractable.StartConversation();
+                }
+                else if (inDialogue && canExitDialogue)
+                {
+                    StartCoroutine(EndDialogueCoroutine());
+                }
+            }
         }
 
         public void MoveTowardsPlayer()
@@ -170,8 +190,9 @@ namespace ChainsOfFate.Gerallt
             SetGreetInteractionVisibility(false);
 
             player = FindObjectOfType<PlayerController>().GetComponent<Champion>();
-            
 
+            controls = new CoFPlayerControls();
+            controls.Player.Interact.performed += Interact_performed;
         }
 
         private void Update()
@@ -210,18 +231,18 @@ namespace ChainsOfFate.Gerallt
                 }
             }
 
-            if ((state is NpcState.GreetPlayer or NpcState.TalkingToPlayer) && yarnInteractable.interactable)
+            if ((state is NpcState.GreetPlayer or NpcState.TalkingToPlayer) && yarnInteractable != null && yarnInteractable.interactable)
             {
                 if (InputSystem.GetDevice<Keyboard>().eKey.isPressed) // TODO: Use proper input system action event
                 {
                     if (!inDialogue && canEnterDialogue)
                     {
-                        //StartCoroutine(StartDialogueCoroutine());
-                        yarnInteractable.StartConversation();
+                        StartCoroutine(StartDialogueCoroutine());
+                        //yarnInteractable.StartConversation();
                     }
                     else if (inDialogue && canExitDialogue)
                     {
-                       StartCoroutine(EndDialogueCoroutine());
+                        StartCoroutine(EndDialogueCoroutine());
                     }
                 }
             }

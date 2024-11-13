@@ -6,58 +6,58 @@ namespace ChainsOfFate.Gerallt
 {
     public class DialogueUI : DialogueViewBase
     {
-        //public void InterruptConversation()
-        //{
-        //    requestInterrupt?.Invoke();
-        //}
-        
-        //public override void DialogueStarted()
-        //{
-        //    base.DialogueStarted();
+        public void InterruptConversation()
+        {
+            requestInterrupt?.Invoke();
+        }
 
-        //    DialogueSystemUI.Instance.DialogueStarted();
-        //}
+        public override void DialogueStarted()
+        {
+            base.DialogueStarted();
 
-        //public override void DialogueComplete()
-        //{
-        //    base.DialogueComplete();
+            DialogueSystemUI.Instance.DialogueStarted();
+        }
 
-        //    DialogueSystemUI.Instance.DialogueComplete();
-        //}
+        public override void DialogueComplete()
+        {
+            base.DialogueComplete();
 
-        //public override void UserRequestedViewAdvancement()
-        //{
-        //    base.UserRequestedViewAdvancement();
+            DialogueSystemUI.Instance.DialogueComplete();
+        }
 
-        //    DialogueSystemUI.Instance.UserRequestedViewAdvancement();
-        //}
+        public override void UserRequestedViewAdvancement()
+        {
+            base.UserRequestedViewAdvancement();
 
-        //public override void RunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
-        //{
-        //    DialogueSystemUI.Instance.RunLine(dialogueLine, onDialogueLineFinished);
-            
-        //    //base.RunLine(dialogueLine, onDialogueLineFinished);
-        //}
+            DialogueSystemUI.Instance.UserRequestedViewAdvancement();
+        }
 
-        //public override void InterruptLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
-        //{
-        //    base.InterruptLine(dialogueLine, onDialogueLineFinished);
-            
-        //    DialogueSystemUI.Instance.InterruptLine(dialogueLine, onDialogueLineFinished);
-        //}
+        public override void RunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
+        {
+            DialogueSystemUI.Instance.RunLine(dialogueLine, onDialogueLineFinished);
 
-        //public override void DismissLine(Action onDismissalComplete)
-        //{
-        //    base.DismissLine(onDismissalComplete);
-            
-        //    DialogueSystemUI.Instance.DismissLine(onDismissalComplete);
-        //}
-        
-        //public override void RunOptions(DialogueOption[] dialogueOptions, Action<int> onOptionSelected)
-        //{
-        //    base.RunOptions(dialogueOptions, onOptionSelected);
+            //base.RunLine(dialogueLine, onDialogueLineFinished);
+        }
 
-        //    DialogueSystemUI.Instance.RunOptions(dialogueOptions, onOptionSelected);
-        //}
+        public override void InterruptLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
+        {
+            base.InterruptLine(dialogueLine, onDialogueLineFinished);
+
+            DialogueSystemUI.Instance.InterruptLine(dialogueLine, onDialogueLineFinished);
+        }
+
+        public override void DismissLine(Action onDismissalComplete)
+        {
+            base.DismissLine(onDismissalComplete);
+
+            DialogueSystemUI.Instance.DismissLine(onDismissalComplete);
+        }
+
+        public override void RunOptions(DialogueOption[] dialogueOptions, Action<int> onOptionSelected)
+        {
+            base.RunOptions(dialogueOptions, onOptionSelected);
+
+            DialogueSystemUI.Instance.RunOptions(dialogueOptions, onOptionSelected);
+        }
     }
 }

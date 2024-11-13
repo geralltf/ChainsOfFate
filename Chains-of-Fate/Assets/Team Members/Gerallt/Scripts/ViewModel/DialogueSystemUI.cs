@@ -29,7 +29,8 @@ namespace ChainsOfFate.Gerallt
         public CharacterBase talkingToCharacter;
         public bool playAllLines = false;
         
-        private YarnInteractable yarnInteractable;
+        [SerializeField] private YarnInteractable yarnInteractable;
+
         private Champion player;
         private DialogueOption[] dialogueOptionsTmp;
         private bool waitingForNextLine = false;
@@ -47,9 +48,12 @@ namespace ChainsOfFate.Gerallt
             {
                 dialogueUI = FindObjectOfType<DialogueUI>();
             }
-            
-            yarnInteractable = talkingTo.GetComponent<YarnInteractable>();
-            
+
+            //if (yarnInteractable == null)
+            //{
+            //    yarnInteractable = talkingTo.GetComponent<YarnInteractable>();
+            //}
+
             SetVisibility(true);
             
             yarnInteractable.StartConversation();
