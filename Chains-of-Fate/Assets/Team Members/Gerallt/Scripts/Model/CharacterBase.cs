@@ -90,6 +90,8 @@ namespace ChainsOfFate.Gerallt
 
         [SerializeField] private int level = 0;
 
+        [SerializeField] private int maxLevel = 100;
+
         [SerializeField] private int xp = 0;
 
         // /// <summary>
@@ -212,6 +214,18 @@ namespace ChainsOfFate.Gerallt
             }
         }
         
+        public int MaxLevel
+        {
+            get
+            {
+                return maxLevel;
+            }
+            set
+            {
+                maxLevel = value;
+            }
+        }
+
         public int XP
         {
             get => xp;
@@ -247,7 +261,7 @@ namespace ChainsOfFate.Gerallt
             bool showDebug = false;
             foreach (IStat stat in toLevelUp)
             {
-                if (stat.LevelUp(newLevel, maxLevel))
+                if (stat.LevelUp())
                 {
                     // If the stat value has changed given the level up, add it to the list.
                     statsAffected.Add(stat);

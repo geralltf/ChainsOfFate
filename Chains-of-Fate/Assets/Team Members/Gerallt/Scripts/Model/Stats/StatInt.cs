@@ -41,6 +41,26 @@ public class StatInt : MonoBehaviour, IStat
         }
     }
 
+    public bool LevelUp()
+    {
+        float prev = Level;
+        float newLevel = Level + 1;
+
+        if (newLevel >= 0 && newLevel <= MaxLevel)
+        {
+            Level = newLevel;
+        }
+
+        if (Level != prev)
+        {
+            SelectLevel(Level);
+
+            OnLevelChanged?.Invoke(Level);
+            return true;
+        }
+        return false;
+    }
+
     public bool LevelUp(float newLevel, float MaxLevels)
     {
         float prev = Level;

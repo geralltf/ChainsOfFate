@@ -5,6 +5,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static PlayerController;
 using Random = UnityEngine.Random;
 
 namespace ChainsOfFate.Gerallt
@@ -42,6 +43,13 @@ namespace ChainsOfFate.Gerallt
         public Transform playerTarget;
         public Champion championTarget;
         public NpcState state = NpcState.Idle;
+        public Animator animator;
+
+        public RuntimeAnimatorController newControllerWalk;
+        public RuntimeAnimatorController newControllerAttack;
+        public RuntimeAnimatorController newControllerUseItem;
+
+        private AnimControllerState animControllerState = AnimControllerState.Walking;
 
         private Champion champion;
         private PlayerSensor playerSensor;
@@ -56,6 +64,7 @@ namespace ChainsOfFate.Gerallt
         private Champion player;
 
 
+        private bool playerMoving = false;
 
         //private float spawnZ; //HACK: 
 
@@ -67,7 +76,9 @@ namespace ChainsOfFate.Gerallt
             Idle,
             GreetPlayer,
             FollowingPlayer,
-            TalkingToPlayer
+            TalkingToPlayer,
+            UseItem,
+            Attack
         }
 
         private void Interact_performed(InputAction.CallbackContext context)
@@ -84,6 +95,20 @@ namespace ChainsOfFate.Gerallt
                     StartCoroutine(EndDialogueCoroutine());
                 }
             }
+        }
+
+        public void UseItem()
+        {
+            animator.runtimeAnimatorController = newControllerUseItem;
+            //animator.Play();
+            animControllerState = AnimControllerState.UseItem;
+        }
+
+        public void Attack()
+        {
+            animator.runtimeAnimatorController = newControllerAttack;
+
+            animControllerState = AnimControllerState.Attack;
         }
 
         public void MoveTowardsPlayer()
@@ -107,11 +132,41 @@ namespace ChainsOfFate.Gerallt
                 rb.simulated = true;
                 rb.MovePosition(pos + (separationFactor * separationForce));
 
-                UpdateSprite(posDelta);
+                //UpdateSprite(posDelta);
+
+                playerMoving = true;
+
+                //mariaAnim.SetFloat("Horizontal", move.x); 
+                //mariaAnim.SetFloat("Vertical", move.y);
+                //animator.runtimeAnimatorController
+
+                animator.SetFloat("Horizontal", posDelta.x); //code that checks the movement direction for the animator to use for displaying the walking animations
+                animator.SetFloat("Vertical", posDelta.y);
+
+                animator.SetBool("isMoving", true);
+                //mariaAnim.SetBool("isMoving", true);
             }
             else
             {
                 rb.simulated = false;
+
+                playerMoving = false;
+
+                animator.SetBool("isMoving", false);
+                //mariaAnim.SetBool("isMoving", false);//if there is no movement isMoving is set to false which sets the animator state to idle.
+            }
+
+            //if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)// && !animator.IsInTransition(0))
+            //if(animator.GetCurrentAnimatorStateInfo(0).length > animator.GetCurrentAnimatorStateInfo(0).normalizedTime)
+            //if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animator.IsInTransition(0))
+            if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+            {
+                if (animControllerState == AnimControllerState.Attack || animControllerState == AnimControllerState.UseItem)
+                {
+                    animator.runtimeAnimatorController = newControllerWalk;
+
+                    animControllerState = AnimControllerState.Walking;
+                }
             }
         }
 
@@ -226,6 +281,10 @@ namespace ChainsOfFate.Gerallt
                         case NpcState.FollowingPlayer:
                             break;
                         case NpcState.TalkingToPlayer:
+                            break;
+                        case NpcState.UseItem:
+                            break;
+                        case NpcState.Attack:
                             break;
                     }
                 }

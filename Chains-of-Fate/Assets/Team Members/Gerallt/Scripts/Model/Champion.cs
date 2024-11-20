@@ -28,12 +28,24 @@ namespace ChainsOfFate.Gerallt
 
         public List<GameObject> GetPartyMembers()
         {
-	        foreach (PartyFollow partyMember in Party.GetComponentsInChildren<PartyFollow>())
-	        {
-		        combatPartyMembers.Add(partyMember.combatPrefab);
-	        }
+            //if (Party != null)
+            //{
+            //    var partyMembers = Party.GetComponentsInChildren<PartyFollow>();
 
-	        return combatPartyMembers;
+            //    foreach (PartyFollow partyMember in partyMembers)
+            //    {
+            //        combatPartyMembers.Add(partyMember.combatPrefab);
+            //    }
+            //}
+
+            var partyMembers2 = partyMembers.Select(x => x.GetComponentInChildren<PartyFollow>()).ToList();
+
+            foreach (PartyFollow partyMember in partyMembers2)
+            {
+                combatPartyMembers.Add(partyMember.combatPrefab);
+            }
+
+            return combatPartyMembers;
         }
 
 

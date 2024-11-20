@@ -20,7 +20,17 @@ public class LevelingManager : SingletonBase<LevelingManager>
 
     public void LevelUp(CharacterBase mainCharacter, int defeated, int enemiesCount)
     {
+        mainCharacter.LevelUp(mainCharacter.Level + 1, mainCharacter.MaxLevel, true, true);
 
+        //List<IStat> stats = mainCharacter.GetStatComponents();
+
+        //for (int i = 0; i < defeated; i++)
+        //{
+        //    foreach (IStat stat in stats)
+        //    {
+        //        stat.LevelUp();
+        //    }
+        //}
     }
 
     public void LevelUp()

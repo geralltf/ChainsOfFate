@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2524204034813527522}
   - component: {fileID: 2524204034813527523}
+  - component: {fileID: 252980148}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -84,6 +85,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &252980148
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2524204034813527520}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf1d03ce605598c4dab214eee8d843c8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2524204034815494634
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,6 +178,10 @@ MonoBehaviour:
   playerTarget: {fileID: 0}
   championTarget: {fileID: 0}
   state: 0
+  animator: {fileID: 252980148}
+  newControllerWalk: {fileID: 9100000, guid: cf1d03ce605598c4dab214eee8d843c8, type: 2}
+  newControllerAttack: {fileID: 9100000, guid: 9e97c6d82cd2f1e488f76e66ab9de93e, type: 2}
+  newControllerUseItem: {fileID: 9100000, guid: 392a11823429850468bf6c2004ac444b, type: 2}
 --- !u!114 &2524204034815494645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +211,7 @@ MonoBehaviour:
   speed: 1
   movementSpeed: 1
   level: 0
+  maxLevel: 100
   xp: 0
   isMainCharacter: 0
   counterAttackDamage: 0

@@ -58,6 +58,8 @@ namespace ChainsOfFate.Gerallt
         {
             ResetViewState();
 
+            view.SetActive(false);
+
             if (!isTestMode)
             {
                 SetRootGridVisibilities(true); // HACK: Because Grids draw on top of block bar and scene background, so lets enable them back.

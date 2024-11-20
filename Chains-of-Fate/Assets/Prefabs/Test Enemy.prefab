@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 36927f9ef04b6b2499dce29e0fa5a4c4, type: 3}
+  m_Sprite: {fileID: -1632199511, guid: e5586c9597feec34db4642f29119efba, type: 3}
   m_Color: {r: 1, g: 0, b: 0.12872553, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -218,8 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04008aa58770078408bccb175ceba67d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: {fileID: 0}
-  quickShowCombatScene: 1
+  enemyCombatPrefabs: []
 --- !u!114 &8121122054040910682
 MonoBehaviour:
   m_ObjectHideFlags: 0

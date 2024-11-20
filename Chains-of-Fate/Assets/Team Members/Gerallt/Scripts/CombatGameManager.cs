@@ -70,9 +70,15 @@ namespace ChainsOfFate.Gerallt
             // Cleanup.
             var queue = turnsQueue.ToList();
 
-            foreach (CharacterBase character in queue)
+            if (queue != null && queue.Count > 0)
             {
-                character.OnStatChanged -= Character_OnStatChanged;
+                foreach (CharacterBase character in queue)
+                {
+                    if (character != null)
+                    {
+                        character.OnStatChanged -= Character_OnStatChanged;
+                    }
+                }
             }
         }
 
@@ -388,9 +394,12 @@ namespace ChainsOfFate.Gerallt
 
         public void UnloadScene()
         {
-            CombatUI combatUI = transform.parent.GetComponent<CombatUI>();
-            combatUI.RaiseCloseCombatUI(hasWon);
-            
+            FindObjectOfType<CombatUI>().RaiseCloseCombatUI(hasWon);
+
+            //CombatUI combatUI = transform.parent.GetComponent<CombatUI>();
+
+            //combatUI.RaiseCloseCombatUI(hasWon);
+
             //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene()); // OLD Approach was when we were having combat in a separate scene, and having to unload that.
         }
 
