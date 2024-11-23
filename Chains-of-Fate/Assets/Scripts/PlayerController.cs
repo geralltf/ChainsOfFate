@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
     public RuntimeAnimatorController newControllerAttack;
     public RuntimeAnimatorController newControllerUseItem;
 
+    public GameObject spotlight2DTorch;
+
     private AnimControllerState animControllerState = AnimControllerState.Walking;
 
     public enum AnimControllerState
@@ -78,6 +80,33 @@ public class PlayerController : MonoBehaviour
             }
 
             characterSpriteRenderer.transform.rotation = Quaternion.identity;
+        }
+
+        if(pos.x < 0)
+        {
+            spotlight2DTorch.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 90.0f);
+
+            if (pos.y < 0)
+            {
+                spotlight2DTorch.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 90.0f);
+            }
+            else
+            {
+                spotlight2DTorch.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0);
+            }
+        }
+        else
+        {
+            spotlight2DTorch.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+
+            if (pos.y < 0)
+            {
+                spotlight2DTorch.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 180.0f);
+            }
+            else
+            {
+                spotlight2DTorch.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 270.0f);
+            }
         }
     }
 
